@@ -79,7 +79,7 @@ class BoldDeskSupportSDK {
   }
 
   static Future<void> setLoggingEnabled(bool enable) {
-    return BolddeskSupportSdkPlatform.instance.setLoggingEnabled(enable);
+    return BolddeskSupportSdkPlatform.instance.setLoggingEnabled(true);
   }
 
   static Future<void> setSystemFontSize(bool enable) {
