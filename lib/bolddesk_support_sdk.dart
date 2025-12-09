@@ -10,7 +10,9 @@ class BoldDeskSupportSDK {
     return BolddeskSupportSdkPlatform.instance.initialize(
       appId,
       brandUrl,
-      onSuccess: onSuccess,
+      onSuccess: (message) {
+                      print("SDK Initialized Successfully: $message");
+                    },
       onError: onError,
     );
   }
