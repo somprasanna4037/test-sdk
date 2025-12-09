@@ -169,17 +169,6 @@ public class BolddeskSupportSdkPlugin: NSObject, FlutterPlugin {
         kbDescription: kbDescription, ticketTitle: ticketTitle, ticketDescription: ticketDescription,
         submitButtonText: submitButtonText)
       result(nil)
-    case "openArticleDetailsPage":
-      if let args = call.arguments as? [String: Any],
-        let articleId = args["articleId"] as? Int,
-        let articleSlugTitle = args["articleSlugTitle"] as? String {
-
-          BDSupportSDK.showArticle(
-              articleId: articleId,
-              articleSlugTitle: articleSlugTitle
-          )
-      }
-      result(nil)
     default:
       result(FlutterMethodNotImplemented)
     }

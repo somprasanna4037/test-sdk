@@ -124,23 +124,21 @@ abstract class BolddeskSupportSdkPlatform extends PlatformInterface {
   }
 
   Future<bool> isFromMobileSDK(Map<String, dynamic> userInfo) async {
-    throw UnimplementedError('isFromMobileSDK() has not been implemented.');
+    throw UnimplementedError(
+      'isFromMobileSDK() has not been implemented.',
+    );
   }
 
   Future<void> clearallLocalData() async {
-    throw UnimplementedError('clearallLocalData() has not been implemented.');
+    throw UnimplementedError(
+      'clearallLocalData() has not been implemented.',
+    );
   }
 
   Future<bool> isLoggedIn() async {
-    throw UnimplementedError('isLoggedIn() has not been implemented.');
-  }
-
-  Future<void> openArticleDetailsPage(
-    int articleId,
-    String articleSlugTitle,
-  ) async {
     throw UnimplementedError(
-      'openArticleDetailsPage() has not been implemented.',
+      'isLoggedIn() has not been implemented.',
     );
   }
+  
 }

@@ -181,9 +181,7 @@ class MethodChannelBolddeskSupportSdk extends BolddeskSupportSdkPlatform {
 
   @override
   Future<bool> isFromMobileSDK(Map<String, dynamic> userInfo) async {
-    final result = await methodChannel.invokeMethod<bool>('isFromMobileSDK', {
-      'userInfo': userInfo,
-    });
+    final result = await methodChannel.invokeMethod<bool>('isFromMobileSDK', {'userInfo': userInfo});
     return result ?? false;
   }
 
@@ -196,15 +194,5 @@ class MethodChannelBolddeskSupportSdk extends BolddeskSupportSdkPlatform {
   Future<bool> isLoggedIn() async {
     return await methodChannel.invokeMethod('isLoggedIn');
   }
-
-  @override
-  Future<void> openArticleDetailsPage(
-    int articleId,
-    String articleSlugTitle,
-  ) async {
-    return await methodChannel.invokeMethod('openArticleDetailsPage', {
-      "articleId": articleId,
-      "articleSlugTitle": articleSlugTitle,
-    });
-  }
+  
 }

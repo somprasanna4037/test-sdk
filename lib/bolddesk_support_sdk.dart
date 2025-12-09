@@ -111,16 +111,6 @@ class BoldDeskSupportSDK {
   static Future<bool> isLoggedIn() {
     return BolddeskSupportSdkPlatform.instance.isLoggedIn();
   }
-
-  static Future<void> openArticleDetailsPage(
-    int articleId,
-    String articleSlugTitle,
-  ) {
-    return BolddeskSupportSdkPlatform.instance.openArticleDetailsPage(
-      articleId,
-      articleSlugTitle,
-    );
-  }
 }
 
 class BoldDeskSDKHome {

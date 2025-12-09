@@ -92,16 +92,6 @@ class _MyAppState extends State<MyApp> {
 
               ElevatedButton(
                 onPressed: () {
-                  BoldDeskSupportSDK.openArticleDetailsPage(
-                    0, //article Id
-                    "YOUR_ARTICLE_SLUGTITLE",
-                  );
-                },
-                child: Text("open ArticleDetails Page"),
-              ),
-
-              ElevatedButton(
-                onPressed: () {
                   BoldDeskSupportSDK.showCreateTicket();
                 },
                 child: Text("Show Create Ticket"),

@@ -155,12 +155,7 @@ class BolddeskSupportSdkPlugin : FlutterPlugin, MethodCallHandler {
            val messageData = call.argument<Map<String, String>>("userInfo") ?: emptyMap()
             val value = BoldDeskSupportSDK.isFromMobileSDK(messageData)
             result.success(value)
-        } else if (call.method == "openArticleDetailsPage") {
-            val articleId = call.argument<Int>("articleId") ?: 0
-            val articleSlugTitle = call.argument<String>("articleSlugTitle") ?: ""
-            BoldDeskSupportSDK.openArticleDetailsPage(context, articleId, articleSlugTitle)
-            result.success("opened Article View Successfully")
-        } else {
+        }else {
             result.notImplemented()
         }
     }
