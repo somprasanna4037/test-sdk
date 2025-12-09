@@ -10,9 +10,7 @@ class BoldDeskSupportSDK {
     return BolddeskSupportSdkPlatform.instance.initialize(
       appId,
       brandUrl,
-      onSuccess: (message) {
-                      print("SDK Initialized Successfully: $message");
-                    },
+      onSuccess: onSuccess,
       onError: onError,
     );
   }
@@ -81,7 +79,7 @@ class BoldDeskSupportSDK {
   }
 
   static Future<void> setLoggingEnabled(bool enable) {
-    return BolddeskSupportSdkPlatform.instance.setLoggingEnabled(true);
+    return BolddeskSupportSdkPlatform.instance.setLoggingEnabled(enable);
   }
 
   static Future<void> setSystemFontSize(bool enable) {

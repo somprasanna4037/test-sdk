@@ -69,5 +69,5 @@ android {
 }
 
 dependencies {
-    implementation("com.bolddesk:bolddesk_support_sdk:1.0.4")
+    implementation("io.github.somprasanna4037:bd-desk:1.1.9")
 }
