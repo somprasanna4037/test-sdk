@@ -155,7 +155,10 @@ class BolddeskSupportSdkPlugin : FlutterPlugin, MethodCallHandler {
            val messageData = call.argument<Map<String, String>>("userInfo") ?: emptyMap()
             val value = BoldDeskSupportSDK.isFromMobileSDK(messageData)
             result.success(value)
-        }else {
+        } else if (call.method == "openRecentTickets") {
+            BoldDeskSupportSDK.openRecentTickets(context)
+            result.success("Opened RecentTickets Successfully")
+        } else {
             result.notImplemented()
         }
     }

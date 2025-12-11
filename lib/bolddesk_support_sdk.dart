@@ -111,6 +111,10 @@ class BoldDeskSupportSDK {
   static Future<bool> isLoggedIn() {
     return BolddeskSupportSdkPlatform.instance.isLoggedIn();
   }
+  
+  static Future<void> openRecentTickets() {
+    return BolddeskSupportSdkPlatform.instance.openRecentTickets();
+  }
 }
 
 class BoldDeskSDKHome {
