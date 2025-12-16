@@ -22,7 +22,7 @@ public class BolddeskSupportSdkPlugin: NSObject, FlutterPlugin {
       BDSupportSDK.showKB()
       result(nil)
     case "openRecentTickets":
-      BDSupportSDK.showRecentTicket()
+      BDSupportSDK.showRecentTickets()
       result(nil)
     case "setLoggingEnabled":
       BDSupportSDK.enableLogging()
