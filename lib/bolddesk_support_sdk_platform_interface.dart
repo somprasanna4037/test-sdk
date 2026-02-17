@@ -73,8 +73,12 @@ abstract class BolddeskSupportSdkPlatform extends PlatformInterface {
 
   Future<void> handleAndroidNotification(
     Map<String, dynamic> body,
-    String notificationIcon,
-  );
+    String notificationIconPath,
+  ) async {
+    throw UnimplementedError(
+      'handleAndroidNotification() has not been implemented.',
+    );
+  }
 
   Future<void> setFCMRegistrationToken(String token) {
     throw UnimplementedError(
@@ -133,6 +137,15 @@ abstract class BolddeskSupportSdkPlatform extends PlatformInterface {
 
   Future<bool> isLoggedIn() async {
     throw UnimplementedError('isLoggedIn() has not been implemented.');
+  }
+
+  Future<void> openArticleDetailsPage(
+    int articleId,
+    String articleSlugTitle,
+  ) async {
+    throw UnimplementedError(
+      'openArticleDetailsPage() has not been implemented.',
+    );
   }
 
   Future<void> openRecentTickets() {

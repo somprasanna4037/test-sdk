@@ -9,6 +9,9 @@ import io.flutter.plugin.common.MethodChannel.Result
 import com.syncfusion.bolddeskmobileSDK.BoldDeskSupportSDK
 import com.syncfusion.bolddeskmobileSDK.BoldDeskSDKHome
 import com.syncfusion.bolddeskmobileSDK.R
+import androidx.core.graphics.drawable.IconCompat
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 
 /** BolddeskSupportSdkPlugin */
 class BolddeskSupportSdkPlugin : FlutterPlugin, MethodCallHandler {
@@ -69,10 +72,11 @@ class BolddeskSupportSdkPlugin : FlutterPlugin, MethodCallHandler {
             result.success("Opened create ticket page Successfully")
         } else if (call.method == "showNotification") {
             val messageData = call.argument<Map<String, String>>("body") ?: emptyMap()
-            val icon = call.argument<String>("icon") ?: ""
-            val iconResId = resolveIcon(context, icon)
+            val iconBytes = call.argument<ByteArray>("icon") ?: "".toByteArray()
+            val bitmap = BitmapFactory.decodeByteArray(iconBytes, 0, iconBytes.size)
+            val iconCompact = IconCompat.createWithBitmap(bitmap)
             try {
-                BoldDeskSupportSDK.handlePushNotifications(context, messageData, iconResId)
+                BoldDeskSupportSDK.handlePushNotifications(context, messageData, iconCompact)
                 result.success("Notification shown Successfully")
             } catch (e: Exception) {
                 result.error("NOTIFICATION_FAILED", e.message, null)
@@ -155,6 +159,11 @@ class BolddeskSupportSdkPlugin : FlutterPlugin, MethodCallHandler {
            val messageData = call.argument<Map<String, String>>("userInfo") ?: emptyMap()
             val value = BoldDeskSupportSDK.isFromMobileSDK(messageData)
             result.success(value)
+        } else if (call.method == "openArticleDetailsPage") {
+            val articleId = call.argument<Int>("articleId") ?: 0
+            val articleSlugTitle = call.argument<String>("articleSlugTitle") ?: ""
+            BoldDeskSupportSDK.openArticleDetailsPage(context, articleId, articleSlugTitle)
+            result.success("opened Article View Successfully")
         } else if (call.method == "openRecentTickets") {
             BoldDeskSupportSDK.openRecentTickets(context)
             result.success("Opened RecentTickets Successfully")
