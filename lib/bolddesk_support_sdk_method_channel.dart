@@ -108,11 +108,13 @@ class MethodChannelBolddeskSupportSdk extends BolddeskSupportSdkPlatform {
   @override
   Future<void> handleAndroidNotification(
     Map<String, dynamic> body,
-    String icon,
+    String notificationIconPath
   ) async {
+     final ByteData data = await rootBundle.load(notificationIconPath);
+    final Uint8List iconBytes = data.buffer.asUint8List();
     await methodChannel.invokeMethod('showNotification', {
       'body': body,
-      'icon': icon,
+      'icon': iconBytes,
     });
   }
 
@@ -195,6 +197,17 @@ class MethodChannelBolddeskSupportSdk extends BolddeskSupportSdkPlatform {
   @override
   Future<bool> isLoggedIn() async {
     return await methodChannel.invokeMethod('isLoggedIn');
+  }
+
+  @override
+  Future<void> openArticleDetailsPage(
+    int articleId,
+    String articleSlugTitle,
+  ) async {
+    return await methodChannel.invokeMethod('openArticleDetailsPage', {
+      "articleId": articleId,
+      "articleSlugTitle": articleSlugTitle,
+    });
   }
 
   @override

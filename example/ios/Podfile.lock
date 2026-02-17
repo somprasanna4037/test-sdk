@@ -1,7 +1,7 @@
 PODS:
-  - bd-support-library (2.0.4)
+  - bd-support-library (1.0.9)
   - bd_support_sdk (1.0.0):
-    - bd-support-library (~> 2.0.4)
+    - bd-support-library (~> 1.0.9)
     - Flutter
   - Firebase/CoreOnly (12.4.0):
     - FirebaseCore (~> 12.4.0)
@@ -105,8 +105,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/integration_test/ios"
 
 SPEC CHECKSUMS:
-  bd-support-library: 2b191227c05771fd769fdd3f3110294b973a0665
-  bd_support_sdk: 945180e60ef00d3ee7c60c55719e8994120d5680
+  bd-support-library: 068fede2ebb5088827aa73bb531060da97effb9c
+  bd_support_sdk: 1da4e2a7a734cdb4a6ca69b5a3d8bf5e03444b57
   Firebase: f07b15ae5a6ec0f93713e30b923d9970d144af3e
   firebase_core: 744984dbbed8b3036abf34f0b98d80f130a7e464
   firebase_messaging: 82c70650c426a0a14873e1acdb9ec2b443c4e8b4

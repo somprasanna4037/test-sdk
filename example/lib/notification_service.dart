@@ -53,7 +53,7 @@ class NotificationService {
         if (isFromMobileSDK) {
           BoldDeskSupportSDK.handleAndroidNotification(
             message.data,
-            "sample_app_logo",
+           "assets/images/bold-desk-logo_v1.png",
           );
         }
       }

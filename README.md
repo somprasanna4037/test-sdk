@@ -1,33 +1,15 @@
-# BoldDesk Support SDK
+# bd_support_sdk
 
-The **BoldDesk Mobile Support SDK** enables you to integrate a fully functional help center directly into your mobile application. This allows end-users to access support tickets and Knowledge Base (KB) articles inside the app, reducing the need to open a web browser.
+A new Flutter plugin project.
 
-With the SDK, you can:
+## Getting Started
 
-*   Create a customizable help center dashboard.
-*   Enable users to submit support requests with attachments.
-*   Offer search and filtering capabilities for KB articles to support self-service.
-*   Track ticket status, reply to agents, update, and close tickets.
-*   Support both **anonymous** and **authenticated** users through JWT-based authentication.
-*   Include push notifications for real-time updates.
+This project is a starting point for a Flutter
+[plug-in package](https://flutter.dev/to/develop-plugins),
+a specialized package that includes platform-specific implementation code for
+Android and/or iOS.
 
-The SDK is lightweight, supports theming to match your app’s branding, and guarantees secure authentication.
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
 
-## Key Features
-
-| Feature            | Anonymous | Authenticated |
-| ------------------ | --------- | ------------- |
-| View KB Articles   | ✅         | ✅             |
-| Create Ticket      | ✅         | ✅             |
-| View Tickets       |           | ✅             |
-| Push Notifications |           | ✅             |
-
-## Supported Platforms & Prerequisites
-
-| Platform     | Minimum OS Version |
-| ------------ | ------------------ |
-| Android      | API 28+            | 
-| iOS          | 14.0+              |
-| Flutter      | —                  | 
-
-To set up the SDK in BoldDesk, learn more on [How to Configure Mobile SDK in BoldDesk](https://support.bolddesk.com/kb/article/21786)
