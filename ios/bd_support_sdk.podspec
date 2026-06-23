@@ -16,7 +16,7 @@ The SDK provides easy access to help your app end users
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '14.0'
-  s.dependency 'bd-chat-sample-sdk', '~> 1.0.18'
+  s.dependency 'bd-support-sdk-sample', '~> 1.0.29'
   s.ios.deployment_target = '14.0'
 
   # Flutter.framework does not contain a i386 slice.
